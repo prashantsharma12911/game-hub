@@ -1,12 +1,13 @@
 import React from 'react'
 import logo from '../assets/logo.jpg'
-import { HStack, Image, Text } from '@chakra-ui/react'
+import { HStack, Icon, Image, Text } from '@chakra-ui/react'
 import ColorModeSwithch from './ColorModeSwitch'
+import { IoGameControllerSharp } from "react-icons/io5";
 
 const Navbar = () => {
   return (
     <HStack justifyContent='space-between' padding='10px'>
-        <Image src= {logo} boxSize= '60px'></Image>
+        <Icon as={IoGameControllerSharp} boxSize= '60px'></Icon>
         <ColorModeSwithch></ColorModeSwithch>
     </HStack>
   )
