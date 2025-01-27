@@ -2,6 +2,7 @@ import { Game } from "../hooks/useGame";
 import { Card, CardBody, Heading, HStack, Image, Text } from "@chakra-ui/react";
 import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
+import breoken_image from '../assets/broken_image.webp';
 
 interface props {
   game: Game;
@@ -10,7 +11,7 @@ interface props {
 const GameCard = ({ game }: props) => {
   return (
     <Card  >
-      <Image src={game.background_image} />
+      <Image src={game.background_image === null ? breoken_image  : game.background_image} />
       <CardBody>
         <Heading fontSize="2xl">{game.name}</Heading>
         <HStack justifyContent='space-between'>
