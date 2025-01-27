@@ -5,11 +5,14 @@ import ColorModeSwithch from './ColorModeSwitch'
 import { IoGameControllerSharp } from "react-icons/io5";
 import SearchInput from './SearchInput';
 
-const Navbar = () => {
+interface Props{
+  onSearch : (search : string) => void;
+}
+const Navbar = ({onSearch} : Props) => {
   return (
     <HStack padding='10px'>
         <Icon as={IoGameControllerSharp} boxSize= '60px'></Icon>
-        <SearchInput/>
+        <SearchInput onSearch={onSearch}/>
         <ColorModeSwithch></ColorModeSwithch>
     </HStack>
   )
