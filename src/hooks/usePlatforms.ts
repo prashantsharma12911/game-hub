@@ -1,8 +1,7 @@
 import React from 'react'
-import useData from './useData'
 import { useQuery } from '@tanstack/react-query';
 import apiClient from '../services/api-client';
-import { Response } from './useData';
+import { Response } from '../services/api-client';
 
 interface Platform{
     id : number;

@@ -11,12 +11,13 @@ interface Props{
 
 
 const Emoji  = ({rating} : Props) => {
+  if (!rating) return null;
     const emojiMap : { [key:number] : IconType} = {
         3:GiArcheryTarget,
         4:GoThumbsup,
         5:SlGameController
     }
-    if(rating < 3) return ;
+    if(rating < 3) return null;
   return (
     <Icon as={emojiMap[rating] } boxSize='15px'/>
   )
