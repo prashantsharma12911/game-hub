@@ -7,7 +7,7 @@ interface Genre{
     name : string;
 }
 
-interface Response<T>{
+export interface Response<T>{
     count : number;
     results : T[];
 }
